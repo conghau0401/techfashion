@@ -94,14 +94,18 @@
 <div id="pre-loader"><div class="loader"></div></div>
 
 <script>
-    $(".scroll-template").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#featured-template").offset().top - 62
-        }, 100);
-    });
-    $(".scroll-plugin").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#plugins").offset().top - 62
-        }, 100);
-    });
+    if ($("#featured-template").length) {
+        $(".scroll-template").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#featured-template").offset().top - 62
+            }, 100);
+        });
+    }
+    if ($("#plugins").length) {
+        $(".scroll-plugin").click(function() {
+            $('html, body').animate({
+                scrollTop: $("#plugins").offset().top - 62
+            }, 100);
+        });
+    }
 </script>
